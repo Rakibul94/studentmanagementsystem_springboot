@@ -56,14 +56,14 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student getStudentById(int id) {
+    public Student getStudentById(Long id) {
         return studentRepository.findById(id).get();
     }
 
 
 
     @Override
-    public boolean deleteStudent(int id) {
+    public boolean deleteStudent(Long id) {
         Student student = studentRepository.findById(id).get();
         if (student != null) {
             studentRepository.delete(student);

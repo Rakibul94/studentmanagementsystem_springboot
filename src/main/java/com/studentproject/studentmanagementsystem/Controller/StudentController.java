@@ -36,7 +36,7 @@ public class StudentController {
     }
 
     @GetMapping("/editstudents/{id}")
-    public String EditStudent(@PathVariable int id, Model model) {
+    public String EditStudent(@PathVariable Long id, Model model) {
         Student student = studentService.getStudentById(id);
         model.addAttribute("student", student);
         return "student_edit";
@@ -71,7 +71,7 @@ public class StudentController {
     }
 
     @GetMapping("/deletestudent/{id}")
-    public String deleteStudent(@PathVariable int id, HttpSession session) {
+    public String deleteStudent(@PathVariable Long id, HttpSession session) {
         boolean f = studentService.deleteStudent(id);
         if (f) {
             session.setAttribute("message", "Delete Successful");

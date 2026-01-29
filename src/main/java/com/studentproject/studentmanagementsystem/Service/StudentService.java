@@ -13,8 +13,8 @@ public interface StudentService {
 
     public List<Student> getAllStudents();
 
-    public Student getStudentById(int id);
+    public Student getStudentById(Long id);
 
-    public boolean deleteStudent(int id);
+    public boolean deleteStudent(Long id);
 
 }
