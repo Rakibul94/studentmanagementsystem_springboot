@@ -1,4 +1,4 @@
-package com.studentproject.studentmanagementsystem;
+package com.studentsystem.rakibul;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
