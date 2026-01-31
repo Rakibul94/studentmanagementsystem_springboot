@@ -30,6 +30,11 @@ public class StudentController {
         return "index";
     }
 
+    @GetMapping("/login")
+    public String loginPage() {
+        return "login";
+    }
+
     @GetMapping("/loadaddstudents")
     public String loadAddStudent() {
         return "student_add";
