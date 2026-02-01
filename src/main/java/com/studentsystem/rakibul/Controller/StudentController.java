@@ -2,6 +2,8 @@ package com.studentsystem.rakibul.Controller;
 
 import java.util.List;
 
+import com.studentsystem.rakibul.Facade.StudentFacade;
+import com.studentsystem.rakibul.Service.DepartmentService;
 import jakarta.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -18,9 +20,18 @@ import com.studentsystem.rakibul.Service.StudentService;
 public class StudentController {
 
     private final StudentService studentService;
+    private final StudentFacade studentFacade;
+    private final DepartmentService departmentService;
 
-    public StudentController(StudentService studentService) {
+
+    public StudentController(StudentService studentService,
+                             StudentFacade studentFacade,
+                             DepartmentService departmentService
+                             ) {
+
         this.studentService = studentService;
+        this.studentFacade = studentFacade;
+        this.departmentService = departmentService;
     }
 
     @GetMapping("/")
